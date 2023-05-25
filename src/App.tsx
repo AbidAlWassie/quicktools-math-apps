@@ -1,5 +1,6 @@
 // import './App.css'
 import { Navbar, CalculatorCard } from "./components";
+import images from './constants/images';
 
 function App() {
   const financialCalculators = ['Investment Calculator', 'Salary Calculator', 'Interest Calculator'];
@@ -14,12 +15,12 @@ function App() {
       <Navbar/>
       <div className="container mx-auto">
         <div className="cards grid grid-cols-3 gap-x-[14rem]">
-          <CalculatorCard data-category="Financial" data-items="financial" data-links={financialCalculators} />
-          <CalculatorCard data-category="Time" data-items="time" data-links={timeCalculators} />
-          <CalculatorCard data-category="Area & Length" data-items="AreaLength" data-links={areaLengthCalculators} />
-          <CalculatorCard data-category="Unit Conversion" data-items="unitConversion" data-links={unitConversion} />
-          <CalculatorCard data-category="Math" data-items="Math" data-links={mathCalculators} />
-          <CalculatorCard data-category="Computing" data-items="Computing" data-links={computingCalculators} />
+          <CalculatorCard data-category="Financial" data-items="financial" data-links={financialCalculators} data-icon={images} />
+          <CalculatorCard data-category="Time" data-items="time" data-links={timeCalculators} data-icon={images} />
+          <CalculatorCard data-category="Area & Length" data-items="AreaLength" data-links={areaLengthCalculators} data-icon={images} />
+          <CalculatorCard data-category="Unit Conversion" data-items="unitConversion" data-links={unitConversion} data-icon={images} />
+          <CalculatorCard data-category="Math" data-items="Math" data-links={mathCalculators} data-icon={images} />
+          <CalculatorCard data-category="Computing" data-items="Computing" data-links={computingCalculators} data-icon={images} />
         </div>
       </div>
     </>
