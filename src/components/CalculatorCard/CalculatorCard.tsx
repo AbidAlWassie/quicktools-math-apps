@@ -20,7 +20,7 @@ const CalculatorCard = ({ 'data-category': category, 'data-items': items, 'data-
       <ul className={`section ${items}`}>
         {links.map((link, index) => (
           <li key={index} className="my-2 bg-gray-700 flex h-14 rounded-md">
-            <img src={icons} alt={icons} width={56} height={56}/>
+            <img src={icons} alt={icons} width={56} height={56} className='p-2'/>
             <a href="" onClick={handleClick} className="w-full h-full flex items-center px-2 font-semibold text-2xl">{link}</a>
           </li>
         ))}
