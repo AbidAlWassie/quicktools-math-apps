@@ -3,7 +3,6 @@ import React from 'react';
 interface CalculatorCardProps {
   'data-title': string;
   'data-type': string;
-  'data-icons': Record<string, string>;
   'data-items': { name: string; img: string }[];
 }
 
@@ -13,7 +12,7 @@ function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
   }
 }
 
-const CalculatorCard = ({ 'data-title': title, 'data-type': type, 'data-icons': icons, 'data-items': items }: CalculatorCardProps) => {
+const CalculatorCard = ({ 'data-title': title, 'data-type': type, 'data-items': items }: CalculatorCardProps) => {
   return (
     <div className="card my-2 max-w-[320px]">
       <h2 className="text-4xl font-bold my-3">{title}</h2>
