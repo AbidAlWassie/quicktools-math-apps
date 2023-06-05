@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface CalculatorCardProps {
-  'data-category': string;
-  'data-items': string;
-  'data-icons': string;
-  'data-links': string[];
+  'data-title': string;
+  'data-type': string;
+  'data-icons': Record<string, string>;
+  'data-items': { name: string; img: string }[];
 }
 
 function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
@@ -13,15 +13,15 @@ function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
   }
 }
 
-const CalculatorCard = ({ 'data-category': category, 'data-items': items, 'data-icons': icons, 'data-links': links }: CalculatorCardProps) => {
+const CalculatorCard = ({ 'data-title': title, 'data-type': type, 'data-icons': icons, 'data-items': items }: CalculatorCardProps) => {
   return (
     <div className="card my-2 max-w-[320px]">
-      <h2 className="text-4xl font-bold my-3">{category}</h2>
-      <ul className={`section ${items}`}>
-        {links.map((link, index) => (
+      <h2 className="text-4xl font-bold my-3">{title}</h2>
+      <ul className={`section ${type}`}>
+        {items.map((item, index) => (
           <li key={index} className="my-2 bg-gray-700 flex h-14 rounded-md">
-            <img src={icons} alt={icons} width={56} height={56} className='p-2'/>
-            <a href="" onClick={handleClick} className="w-full h-full flex items-center px-2 font-semibold text-2xl">{link}</a>
+            <img src={item.img} alt={item.img} width={56} height={56} className='p-2'/>
+            <a href="" onClick={handleClick} className="w-full h-full flex items-center px-2 font-semibold text-2xl">{item.name}</a>
           </li>
         ))}
       </ul>

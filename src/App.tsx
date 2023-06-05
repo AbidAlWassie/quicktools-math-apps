@@ -3,24 +3,54 @@ import { Navbar, CalculatorCard } from "./components";
 import images from './constants/images';
 
 function App() {
-  const financialCalculators = ['Investment Calculator', 'Salary Calculator', 'Interest Calculator'];
-  const timeCalculators = ['Time Between', 'Date Between', 'Age/Death'];
-  const areaLengthCalculators = ['Land/Area', 'Volume', 'Geometry'];
-  const unitConversion = ['Mass/Weight', 'Length', 'Volume'];
-  const mathCalculators = ['Standard Calculator', 'Scientific Calculator', 'Energy Converter'];
-  const computingCalculators = ['Data Calculator', 'Color Converter', 'Binary Calculator'];
+
+  const financialData = [
+    { name: 'Investment Calculator', img: images.profit_80 },
+    { name: 'Salary Calculator', img: images.cash_80 },
+    { name: 'Interest Calculator', img: images.increase_80 },
+  ];
+  
+  const unitConversionData = [
+    { name: 'Mass/Weight', img: images.weight_kg_80 },
+    { name: 'Length', img: images.length_80 },
+    { name: 'Volume', img: images.front_view_80 },
+  ];
+
+  const AreaCalculatorData = [
+    { name: 'Land/Area', img: images.weight_kg_80 },
+    { name: 'Volume', img: images.length_80 },
+    { name: 'Geometry', img: images.front_view_80 },
+  ];
+
+  const timeCalculatorData = [
+    { name: 'Time Between', img: images.time_80 },
+    { name: 'Date Between', img: images.calendar_80 },
+    { name: 'Age/Death', img: images.heart_with_pulse_80 },
+  ];
+
+  const MathCalculatorData = [
+    { name: 'Standard Calculator', img: images.calculator_80 },
+    { name: 'Scientific Calculator', img: images.fx },
+    { name: 'Energy Converter', img: images.flash_on_80 },
+  ];
+
+  const computingCalculatorsData = [
+    { name: 'Data Calculator', img: images.hdd_80 },
+    { name: 'Color Converter', img: images.rgb_color_wheel_80 },
+    { name: 'Binary Calculator', img: images.binary_80 },
+  ];
 
   return (
     <>
       <Navbar/>
       <div className="container mx-auto">
         <div className="cards grid grid-cols-3 gap-x-[14rem]">
-          <CalculatorCard data-category="Financial" data-items="financial" data-links={financialCalculators} data-icons={images.cash_80} />
-          <CalculatorCard data-category="Time" data-items="time" data-links={timeCalculators} data-icons={images.calendar_80} />
-          <CalculatorCard data-category="Area & Length" data-items="AreaLength" data-links={areaLengthCalculators} data-icons={images.length_80} />
-          <CalculatorCard data-category="Unit Conversion" data-items="unitConversion" data-links={unitConversion} data-icons={images.weight_kg_80} />
-          <CalculatorCard data-category="Math" data-items="Math" data-links={mathCalculators} data-icons={images.fx} />
-          <CalculatorCard data-category="Computing" data-items="Computing" data-links={computingCalculators} data-icons={images.hdd_80} />
+          <CalculatorCard data-title="Financial" data-type="financial" data-items={financialData} />
+          <CalculatorCard data-title="Time" data-type="time" data-items={timeCalculatorData} />
+          <CalculatorCard data-title="Area & Length" data-type="AreaLength" data-items={AreaCalculatorData} />
+          <CalculatorCard data-title="Unit Conversion" data-type="unitConversion" data-items={unitConversionData} />
+          <CalculatorCard data-title="Math" data-type="Math" data-items={MathCalculatorData} />
+          <CalculatorCard data-title="Computing" data-type="Computing" data-items={computingCalculatorsData} />
         </div>
       </div>
     </>
