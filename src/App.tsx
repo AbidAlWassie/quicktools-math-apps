@@ -1,5 +1,4 @@
-// import './App.css'
-import { Navbar, CalculatorCard } from "./components";
+import { Navbar, CalculatorCard, PageNav } from "./components";
 import images from './constants/images';
 
 function App() {
@@ -11,13 +10,13 @@ function App() {
   ];
   
   const unitConversionData = [
-    { name: 'Mass/Weight', img: images.weight_kg_80 },
+    { name: 'Mass & Weight', img: images.weight_kg_80 },
     { name: 'Length', img: images.length_80 },
     { name: 'Volume', img: images.front_view_80 },
   ];
 
   const AreaCalculatorData = [
-    { name: 'Land/Area', img: images.weight_kg_80 },
+    { name: 'Land & Area', img: images.weight_kg_80 },
     { name: 'Volume', img: images.length_80 },
     { name: 'Geometry', img: images.front_view_80 },
   ];
@@ -25,7 +24,7 @@ function App() {
   const timeCalculatorData = [
     { name: 'Time Between', img: images.time_80 },
     { name: 'Date Between', img: images.calendar_80 },
-    { name: 'Age/Death', img: images.heart_with_pulse_80 },
+    { name: 'Age & Death', img: images.heart_with_pulse_80 },
   ];
 
   const MathCalculatorData = [
@@ -40,9 +39,16 @@ function App() {
     { name: 'Binary Calculator', img: images.binary_80 },
   ];
 
+  // const JustForFunData = [
+  //   { name: 'Data Calculator', img: images.hdd_80 },
+  //   { name: 'Color Converter', img: images.rgb_color_wheel_80 },
+  //   { name: 'Binary Calculator', img: images.binary_80 },
+  // ];
+
   return (
     <>
       <Navbar/>
+      <PageNav/>
       <div className="container mx-auto">
         <div className="cards grid grid-cols-3 gap-x-[14rem]">
           <CalculatorCard data-title="Financial" data-type="financial" data-items={financialData} />
@@ -51,6 +57,7 @@ function App() {
           <CalculatorCard data-title="Unit Conversion" data-type="unitConversion" data-items={unitConversionData} />
           <CalculatorCard data-title="Math" data-type="Math" data-items={MathCalculatorData} />
           <CalculatorCard data-title="Computing" data-type="Computing" data-items={computingCalculatorsData} />
+          {/* <CalculatorCard data-title="User Customs" data-type="JIF" data-items={JustForFunData} /> */}
         </div>
       </div>
     </>
