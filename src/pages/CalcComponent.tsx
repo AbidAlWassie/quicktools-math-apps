@@ -1,9 +1,12 @@
 export default function CalcComponent() {
   const pageUrl = window.location.href;
-  const calcName = pageUrl.substring(pageUrl.lastIndexOf('/') + 1).replace(/%20/g, ' ');
+  const pageName = pageUrl.substring(pageUrl.lastIndexOf('/') + 1);
+  const calcName = pageName.replace(/%20/g, ' ');
+  const calcClass = pageName.replace(/%20/g, '_').toLowerCase();
+
   return (
-    <div>
-      <h2 className="font-bold text-3xl flex justify-center py-4">{calcName}</h2>
+    <div className={calcClass}>
+      <h2 className="font-bold text-3xl py-4">{calcName}</h2>
       <p>Calc Stuff</p>
     </div>
   )
