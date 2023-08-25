@@ -1,7 +1,7 @@
 const PageNav = () => {
 
   const pageUrl = window.location.href;
-  const calcName = pageUrl.substring(pageUrl.lastIndexOf('/') + 1).replace(/%20/g, ' ');
+  const calcName = pageUrl.substring(pageUrl.lastIndexOf("/") + 1).replace(/%20/g, " ");
 
   return (
     <div className="bg-gray-800">
