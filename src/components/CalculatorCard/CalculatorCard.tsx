@@ -15,7 +15,7 @@ function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
 
 const CalculatorCard = ({ "data-title": title, "data-type": type, "data-items": items }: CalculatorCardProps) => {
   return (
-    <div className="card my-2 max-w-[320px]">
+    <div className="card my-2 max-w-[320px] min-w-[320px] mx-auto">
       <h2 className="text-4xl font-bold my-3">{title}</h2>
       <ul className={`section ${type}`}>
         {items.map((item, index) => (

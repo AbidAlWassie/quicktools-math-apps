@@ -39,7 +39,7 @@ export default function Home() {
   // ];
 
   return (
-    <div className="cards grid grid-cols-3 gap-x-[14rem]">
+    <div className="cards grid grid-cols-1 gap-x-[14rem] xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2  sm:grid-cols-1">
       <CalculatorCard data-title="Financial" data-type="financial" data-items={financialCalculatorData} />
       <CalculatorCard data-title="Time" data-type="time" data-items={timeCalculatorData} />
       <CalculatorCard data-title="Area & Length" data-type="AreaLength" data-items={AreaCalculatorData} />
