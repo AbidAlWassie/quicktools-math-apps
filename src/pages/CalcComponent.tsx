@@ -10,16 +10,16 @@ export default function CalcComponent() {
   let result;
   switch (mathObject.operation) {
     case 'addition':
-      result = mathObject.operands.reduce((a, b) => a + b, 0);
+      result = mathObject.operands.reduce((a: any, b: any) => a + b, 0);
       break;
     case 'subtraction':
-      result = mathObject.operands.reduce((a, b) => a - b);
+      result = mathObject.operands.reduce((a: number, b: number) => a - b);
       break;
     case 'multiplication':
-      result = mathObject.operands.reduce((a, b) => a * b, 1);
+      result = mathObject.operands.reduce((a: number, b: number) => a * b, 1);
       break;
     case 'division':
-      result = mathObject.operands.reduce((a, b) => a / b);
+      result = mathObject.operands.reduce((a: number, b: number) => a / b);
       break;
     default:
       console.log('Invalid operation');
